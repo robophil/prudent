@@ -1,7 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import StorybookUI from './storybook'
 
-export default class App extends React.Component {
+export class App extends React.Component {
   render () {
     return (
       <View style={styles.container}>
@@ -21,3 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 })
+
+const index = process.env.REACT_NATIVE_APP_EXPO ? StorybookUI : App
+
+export default index
