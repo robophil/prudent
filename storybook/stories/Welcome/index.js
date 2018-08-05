@@ -1,31 +1,31 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import PropTypes from 'prop-types';
+import React from 'react'
+import { View, Text } from 'react-native'
+import PropTypes from 'prop-types'
 
 export default class Welcome extends React.Component {
   styles = {
     wrapper: {
       flex: 1,
       padding: 24,
-      justifyContent: 'center',
+      justifyContent: 'center'
     },
     header: {
       fontSize: 18,
-      marginBottom: 18,
+      marginBottom: 18
     },
     content: {
       fontSize: 12,
       marginBottom: 10,
-      lineHeight: 18,
-    },
+      lineHeight: 18
+    }
   };
 
-  showApp(event) {
-    event.preventDefault();
-    this.props.showApp();
+  showApp (event) {
+    event.preventDefault()
+    this.props.showApp()
   }
 
-  render() {
+  render () {
     return (
       <View style={this.styles.wrapper}>
         <Text style={this.styles.header}>Welcome to React Native Storybook</Text>
@@ -40,13 +40,13 @@ export default class Welcome extends React.Component {
           editing the "storybook/stories/Welcome.js" file to edit this message.
         </Text>
       </View>
-    );
+    )
   }
 }
 
 Welcome.propTypes = {
-  showApp: PropTypes.func,
-};
+  showApp: PropTypes.func
+}
 Welcome.defaultProps = {
-  showApp: () => {},
-};
+  showApp: () => {}
+}
